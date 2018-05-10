@@ -19,8 +19,8 @@
 #include "chainparamsseeds.h"
 
 
-#define GENESIS_TIME 1525981962
-#define GENESIS_DIFFICULTY 0x1e0ffff0
+#define GENESIS_TIME 1525985961
+#define GENESIS_DIFFICULTY 0x207fffff
 
 void MineGenesisBlock(CBlock &genesis);
 
@@ -145,19 +145,19 @@ public:
         pchMessageStart[1] = 0x59;
         pchMessageStart[2] = 0x0c;
         pchMessageStart[3] = 0xf1;
-        vAlertPubKey = ParseHex("042300d8083f237e0cb1b9082b6e07e2ed95c38f6aaa8c39b3ad92896ca55ff5328f0dbdddaffa03a67b2bbc60d87bd6bc2c47234cfa7edf203f802c7484e885e3");
+        vAlertPubKey = ParseHex("046216bea21b5eaf6942ca01ed12d594117544638aa549046aa0540dde0e0a3dd3836eb10cfdeacfe75767263210ce48c1e58ac6c7c1e77e25746a5b22e6f9f1f7");
         nDefaultPort = 9555;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(GENESIS_TIME, 350182, GENESIS_DIFFICULTY, 1, 10 * COIN); 
+        genesis = CreateGenesisBlock(1525985211, 1541081, 0x1e0ffff0, 1, 10 * COIN); 
         MineGenesisBlock(genesis);
         
         consensus.hashGenesisBlock = genesis.GetHash();
 	
 
-        //assert(consensus.hashGenesisBlock == uint256S("0x000005e6f2d74cac322cc82935509e856a9a9cf6b24205cb5ab817041db79fe6"));
+        //assert(consensus.hashGenesisBlock == uint256S("0x00000b5f844e9ad6ba5cfd310ac8421ba2bd143e90c3fc942ad91998a84abd89"));
         //assert(genesis.hashMerkleRoot == uint256S("0xdc2cab5a1de54ba52f1b0c52386fefafa8bbdad1acac7ff4bd4779e314709716"));
 
 
@@ -263,21 +263,21 @@ public:
         pchMessageStart[1] = 0x9l;
         pchMessageStart[2] = 0x88;
         pchMessageStart[3] = 0x09;
-        vAlertPubKey = ParseHex("004096b14e8fd9e845b0d620b1fa6ef743df9f67ef151da5bc9fa30d4912225abd1df6703450f73d3fceea49882827aed5a3f6af3a697ae4bb5a93352d88113fd9e");
+        vAlertPubKey = ParseHex("0433da4a27582b3f1d05be08c9bb71f5df00640a96c12c58b944ee2fe03ddef68f62d47191056eae90e670aaec25240f70fab0c7598cfad98690ec8d91d944c96c");
         nDefaultPort = 87555;
         nMaxTipAge = 0x7fffffff; // allow mining on top of old blocks for testnet
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 1000;
 
-       genesis = CreateGenesisBlock(GENESIS_TIME, 350182, GENESIS_DIFFICULTY, 1, 10 * COIN); 
+       genesis = CreateGenesisBlock(1525985961, 2826391, 0x1e0ffff0, 1, 10 * COIN); 
         //MineGenesisBlock(genesis);
 
-        consensus.hashGenesisBlock = genesis.GetHash();
+        //consensus.hashGenesisBlock = genesis.GetHash();
 	
 
 
 
-        //assert(consensus.hashGenesisBlock == uint256S("0x0000016d1c3b31b7adedaadf7d2fb7eacd565b204741856e97bbe6d8b8348280"));
+        //assert(consensus.hashGenesisBlock == uint256S("0x000006cecc5cb0f65d9953bdeb9a7c359418e33efc2ca393c69dd27cd970019f"));
         //assert(genesis.hashMerkleRoot == uint256S("0xdc2cab5a1de54ba52f1b0c52386fefafa8bbdad1acac7ff4bd4779e314709716"));
 
         vFixedSeeds.clear();
@@ -384,10 +384,10 @@ public:
         nDefaultPort = 86555;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(GENESIS_TIME, 0, GENESIS_DIFFICULTY, 1, 10 * COIN);
+        genesis = CreateGenesisBlock(1525985961, 3, 0x207fffff, 1, 10 * COIN);
         //MineGenesisBlock(genesis);
 
-        consensus.hashGenesisBlock = genesis.GetHash();
+        //consensus.hashGenesisBlock = genesis.GetHash();
 
 
 
