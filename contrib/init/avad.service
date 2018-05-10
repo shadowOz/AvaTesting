@@ -1,0 +1,22 @@
+[Unit]
+Description=Ava's distributed currency daemon
+After=network.target
+
+[Service]
+User=avacore
+Group=avacore
+
+Type=forking
+PIDFile=/var/lib/avad/avad.pid
+ExecStart=/usr/bin/avad -daemon -pid=/var/lib/avad/avad.pid \
+-conf=/etc/avacore/ava.conf -datadir=/var/lib/avad -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

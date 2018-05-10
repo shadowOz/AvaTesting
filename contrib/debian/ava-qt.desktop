@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Ava
+Comment=Ava P2P Cryptocurrency
+Comment[fr]=Ava, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Ava, eşten eşe kriptografik sanal para birimi
+Exec=ava-qt %u
+Terminal=false
+Type=Application
+Icon=ava128
+MimeType=x-scheme-handler/ava;
+Categories=Office;Finance;

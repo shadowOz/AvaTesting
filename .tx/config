@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[ava.qt-translation-012x]
+file_filter = src/qt/locale/ava_<lang>.ts
+source_file = src/qt/locale/ava_en.ts
+source_lang = en

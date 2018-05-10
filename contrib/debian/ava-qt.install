@@ -1,0 +1,6 @@
+usr/local/bin/ava-qt usr/bin
+share/pixmaps/ava32.xpm usr/share/pixmaps
+share/pixmaps/ava16.xpm usr/share/pixmaps
+share/pixmaps/ava128.png usr/share/pixmaps
+debian/ava-qt.desktop usr/share/applications
+debian/ava-qt.protocol usr/share/kde4/services/

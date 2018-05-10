@@ -1,0 +1,11 @@
+[Protocol]
+exec=ava-qt '%u'
+protocol=ava
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
